@@ -15,7 +15,7 @@ matricula: "Digite sua matrícula aqui por obséquio"
     - `pipx ensurepath`
     - Reinicie o terminal
   - Instale o tko
-    - `pipx install tko`
+    - ``
 
 ## Vou programar no Codespace
 

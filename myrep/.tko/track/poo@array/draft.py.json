@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-29_14-29-12",
+            "content": "class pessoa:\n\n    \n\n\nclass onibus:\n    def __init__(self, n_cadeiras: int):\n        self.espera: list [pessoa] = []\n        self.cadeiras: list[pessoa | None] = []\n        for _ in range (n_cadeiras):\n            self.cadeiras.append(None)\n\n    def __str__(self):\n        cadeiras = \",\".join ([str (x) if x else \"----\" for x in self.cadeiras])\n        espera = \",\".join ([str(x) for x in self.espera])\n        return f\"cadeiras: [{self.cadeiras}\\nespera:{self.espera}]\"\n\n\ndavid = pessoa(\"david\")\nprint(david)\nonibus = onibus(5)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\n\n",
+            "lines": "27"
+        }
+    ]
+}
