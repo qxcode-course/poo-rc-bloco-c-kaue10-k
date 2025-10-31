@@ -1,0 +1,6 @@
+2025-10-31 13:41:09, MOVE, v:1, k:poo@array, mode:PICK
+2025-10-31 13:49:59, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:31
+2025-10-31 14:02:16, EXEC, v:1, k:poo@array, mode:LOCK, rate:0, size:30
+2025-10-31 14:02:24, EXEC, v:1, k:poo@array, mode:FREE
+2025-10-31 14:02:48, MOVE, v:1, k:poo@array, mode:PICK
+2025-10-31 14:02:48, EXEC, v:1, k:poo@array, mode:LOCK, rate:0

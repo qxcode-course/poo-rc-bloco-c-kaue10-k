@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2025-10-29_14-29-12",
-            "content": "class pessoa:\n\n    \n\n\nclass onibus:\n    def __init__(self, n_cadeiras: int):\n        self.espera: list [pessoa] = []\n        self.cadeiras: list[pessoa | None] = []\n        for _ in range (n_cadeiras):\n            self.cadeiras.append(None)\n\n    def __str__(self):\n        cadeiras = \",\".join ([str (x) if x else \"----\" for x in self.cadeiras])\n        espera = \",\".join ([str(x) for x in self.espera])\n        return f\"cadeiras: [{self.cadeiras}\\nespera:{self.espera}]\"\n\n\ndavid = pessoa(\"david\")\nprint(david)\nonibus = onibus(5)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\n\n",
+            "content": "@@ -11,115 +11,13 @@\n oa:%0A\n+%0A\n     \n-def __init__(self, nome: str):%0A        self.nome = nome%0A    def __str__(self):%0A        return self.nome\n %0A%0A%0Ac\n@@ -52,16 +52,18 @@\n _(self, \n+n_\n cadeiras\n@@ -182,16 +182,18 @@\n  range (\n+n_\n cadeiras\n@@ -522,17 +522,16 @@\n ibus(5)%0A\n-%0A\n onibus.e\n@@ -575,23 +575,13 @@\n end(\n-Pessoa(%22Maria%22)\n+david\n )%0Aon\n@@ -603,22 +603,13 @@\n end(\n-Pessoa(%22Jo%C3%A3o%22)\n+david\n )%0Aon\n@@ -631,21 +631,13 @@\n end(\n-Pessoa(%22Ana%22)\n+david\n )%0Aon\n@@ -659,36 +659,12 @@\n end(\n-Pessoa(%22Carlos%22))%0A%0Aprint(onibus)\n+david)%0A%0A\n",
             "lines": "27"
+        },
+        {
+            "label": "2025-10-31_13-49-59",
+            "content": "@@ -1,15 +1,15 @@\n class \n-P\n+p\n essoa:%0A \n@@ -67,17 +67,16 @@\n  = nome%0A\n-%0A\n     def \n@@ -123,17 +123,17 @@\n %0A%0Aclass \n-O\n+o\n nibus:%0A \n@@ -191,26 +191,27 @@\n espera: list\n-%5BP\n+ %5Bp\n essoa%5D = %5B%5D%0A\n@@ -238,17 +238,17 @@\n s: list%5B\n-P\n+p\n essoa %7C \n@@ -256,20 +256,25 @@\n one%5D = %5B\n-None\n+%5D%0A       \n  for _ i\n@@ -280,16 +280,17 @@\n in range\n+ \n (cadeira\n@@ -291,17 +291,56 @@\n adeiras)\n-%5D\n+:%0A            self.cadeiras.append(None)\n %0A%0A    de\n@@ -372,37 +372,34 @@\n cadeiras\n-_str\n  = %22,\n- \n %22.join\n+ \n (%5Bstr\n+ \n (x) if x\n@@ -454,24 +454,20 @@\n pera\n-_str\n  = %22,\n- \n %22.join\n+ \n (%5Bst\n@@ -515,9 +515,9 @@\n n f%22\n-C\n+c\n adei\n@@ -523,24 +523,29 @@\n iras: %5B%7B\n+self.\n cadeiras\n _str%7D%5D%5Cn\n@@ -540,36 +540,30 @@\n iras\n-_str%7D%5D%5CnE\n+%7D%5Cne\n spera:\n- %5B%7B\n+%7Bself.\n espera\n-_str\n %7D%5D%22%0A\n@@ -576,9 +576,9 @@\n d = \n-P\n+p\n esso\n@@ -614,9 +614,9 @@\n s = \n-O\n+o\n nibu\n@@ -662,37 +662,47 @@\n s.espera.append(\n-david\n+Pessoa(%22Maria%22)\n )%0Aonibus.espera.\n@@ -700,37 +700,46 @@\n s.espera.append(\n-david\n+Pessoa(%22Jo%C3%A3o%22)\n )%0Aonibus.espera.\n@@ -737,37 +737,45 @@\n s.espera.append(\n-david\n+Pessoa(%22Ana%22)\n )%0Aonibus.espera.\n@@ -781,21 +781,32 @@\n .append(\n-david\n+Pessoa(%22Carlos%22)\n )%0A%0Aprint\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-10-31_14-02-16",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\n\n\nclass Onibus:\n    def __init__(self, cadeiras: int):\n        self.espera: list[Pessoa] = []\n        self.cadeiras: list[Pessoa | None] = [None for _ in range(cadeiras)]\n\n    def __str__(self):\n        cadeiras_str = \", \".join([str(x) if x else \"----\" for x in self.cadeiras])\n        espera_str = \", \".join([str(x) for x in self.espera])\n        return f\"Cadeiras: [{cadeiras_str}]\\nEspera: [{espera_str}]\"\n\n\ndavid = Pessoa(\"david\")\nprint(david)\nonibus = Onibus(5)\n\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\n\nprint(onibus)",
+            "lines": "30"
         }
     ]
 }

@@ -1,27 +1,30 @@
-class pessoa:
-
-    
-
-
-class onibus:
-    def __init__(self, n_cadeiras: int):
-        self.espera: list [pessoa] = []
-        self.cadeiras: list[pessoa | None] = []
-        for _ in range (n_cadeiras):
-            self.cadeiras.append(None)
+class Pessoa:
+    def __init__(self, nome: str):
+        self.nome = nome
 
     def __str__(self):
-        cadeiras = ",".join ([str (x) if x else "----" for x in self.cadeiras])
-        espera = ",".join ([str(x) for x in self.espera])
-        return f"cadeiras: [{self.cadeiras}\nespera:{self.espera}]"
+        return self.nome
 
 
-david = pessoa("david")
+class Onibus:
+    def __init__(self, cadeiras: int):
+        self.espera: list[Pessoa] = []
+        self.cadeiras: list[Pessoa | None] = [None for _ in range(cadeiras)]
+
+    def __str__(self):
+        cadeiras_str = ", ".join([str(x) if x else "----" for x in self.cadeiras])
+        espera_str = ", ".join([str(x) for x in self.espera])
+        return f"Cadeiras: [{cadeiras_str}]\nEspera: [{espera_str}]"
+
+
+david = Pessoa("david")
 print(david)
-onibus = onibus(5)
+onibus = Onibus(5)
+
 onibus.espera.append(david)
 onibus.espera.append(david)
 onibus.espera.append(david)
 onibus.espera.append(david)
 onibus.espera.append(david)
 
+print(onibus)
