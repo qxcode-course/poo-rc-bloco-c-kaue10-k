@@ -1,0 +1,4 @@
+2025-11-04 12:49:04, MOVE, v:1, k:poo@budega, mode:DOWN
+2025-11-04 12:49:06, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-04 14:09:58, SELF, v:1, k:poo@array, rate:60, alone:5
+2025-11-04 14:10:00, MOVE, v:1, k:poo@array, mode:PICK

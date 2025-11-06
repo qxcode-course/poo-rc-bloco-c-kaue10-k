@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-06_13-48-25",
+            "content": "@@ -7,17 +7,16 @@\n cliente:\n- \n %0A    %0A  \n@@ -46,17 +46,16 @@\n me: str)\n-:\n %0A       \n@@ -75,197 +75,5 @@\n nome\n-%0A    %0A    def getNome(self) -%3E str:%0A        return self.__nome%0A    %0A    def __str__(self) -%3E str:%0A        return self.__nome%0A    %0Aclass market:%0A    %0A    def__init__(self, qtd_caixas: int):%0A   \n  \n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-06_13-56-34",
+            "content": "class cliente: \n    \n    def __init__(self, nome: str):\n        self.nome = nome\n    \n    def getNome(self) -> str:\n        return self.__nome\n    \n    def __str__(self) -> str:\n        return self.__nome\n    \nclass market:\n    \n    def__init__(self, qtd_caixas: int):\n    ",
+            "lines": "15"
+        }
+    ]
+}

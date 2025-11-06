@@ -12,7 +12,12 @@
         },
         {
             "label": "2025-10-31_14-02-16",
-            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\n\n\nclass Onibus:\n    def __init__(self, cadeiras: int):\n        self.espera: list[Pessoa] = []\n        self.cadeiras: list[Pessoa | None] = [None for _ in range(cadeiras)]\n\n    def __str__(self):\n        cadeiras_str = \", \".join([str(x) if x else \"----\" for x in self.cadeiras])\n        espera_str = \", \".join([str(x) for x in self.espera])\n        return f\"Cadeiras: [{cadeiras_str}]\\nEspera: [{espera_str}]\"\n\n\ndavid = Pessoa(\"david\")\nprint(david)\nonibus = Onibus(5)\n\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\n\nprint(onibus)",
+            "content": "@@ -117,16 +117,17 @@\n f.nome%0A%0A\n+%0A\n class On\n@@ -738,10 +738,8 @@\n (onibus)\n-%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-11-06_13-38-56",
+            "content": "class Pessoa:\n    def __init__(self, nome: str):\n        self.nome = nome\n\n    def __str__(self):\n        return self.nome\n\nclass Onibus:\n    def __init__(self, cadeiras: int):\n        self.espera: list[Pessoa] = []\n        self.cadeiras: list[Pessoa | None] = [None for _ in range(cadeiras)]\n\n    def __str__(self):\n        cadeiras_str = \", \".join([str(x) if x else \"----\" for x in self.cadeiras])\n        espera_str = \", \".join([str(x) for x in self.espera])\n        return f\"Cadeiras: [{cadeiras_str}]\\nEspera: [{espera_str}]\"\n\n\ndavid = Pessoa(\"david\")\nprint(david)\nonibus = Onibus(5)\n\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\nonibus.espera.append(david)\n\nprint(onibus)\n\n",
             "lines": "30"
         }
     ]

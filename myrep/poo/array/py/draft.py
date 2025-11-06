@@ -5,7 +5,6 @@ class Pessoa:
     def __str__(self):
         return self.nome
 
-
 class Onibus:
     def __init__(self, cadeiras: int):
         self.espera: list[Pessoa] = []
@@ -28,3 +27,4 @@ onibus.espera.append(david)
 onibus.espera.append(david)
 
 print(onibus)
+
