@@ -7,8 +7,28 @@
         },
         {
             "label": "2025-11-06_13-56-34",
-            "content": "class cliente: \n    \n    def __init__(self, nome: str):\n        self.nome = nome\n    \n    def getNome(self) -> str:\n        return self.__nome\n    \n    def __str__(self) -> str:\n        return self.__nome\n    \nclass market:\n    \n    def__init__(self, qtd_caixas: int):\n    ",
+            "content": "@@ -3,14 +3,15 @@\n ass \n-pessoa\n+cliente\n : %0A \n@@ -270,79 +270,4 @@\n     \n-%0A    self.caixas = %5Bnone for _ in range (qtd_caixas)%5D%0A    self.espera = %5B%5D%0A\n",
             "lines": "15"
+        },
+        {
+            "label": "2025-11-08_13-39-04",
+            "content": "@@ -220,33 +220,32 @@\n et:%0A    %0A    def\n- \n __init__(self, q\n@@ -285,21 +285,10 @@\n ixas\n-: list%5Bpessoa\n+ =\n  %5Bno\n@@ -339,87 +339,9 @@\n era \n-: list %5Bpessoa%5D = %5B%5D%0A%0A    def __str__ (self) -%3E str:%0A        caixas_str = %22,%22.join \n+= %5B%5D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-11-09_14-17-29",
+            "content": "@@ -3,16 +3,21 @@\n ass \n-Cliente:\n+pessoa: %0A    \n %0A   \n@@ -57,26 +57,24 @@\n        self.\n-__\n nome = nome%0A\n@@ -69,24 +69,28 @@\n nome = nome%0A\n+    \n %0A    def get\n@@ -89,18 +89,17 @@\n  def get\n-_n\n+N\n ome(self\n@@ -135,16 +135,20 @@\n .__nome%0A\n+    \n %0A    def\n@@ -213,16 +213,13 @@\n ss m\n-ercantil\n+arket\n :%0A  \n@@ -355,23 +355,22 @@\n : list %5B\n-Cliente\n+pessoa\n %5D = %5B%5D%0A%0A\n@@ -376,32 +376,33 @@\n %0A    def __str__\n+ \n (self) -%3E str:%0A \n@@ -427,649 +427,11 @@\n = %22,\n- \n %22.join\n-(str(c) if c is not None else %22-----%22 for c in self.caixas)%0A        fila_str = %22, %22.join(str(p) for p in self.espera)%0A        return f%22Caixas: %5B%7Bcaixas_str%7D%5D%5CnEspera: %5B%7Bfila_str%7D%5D%22%0A%0A    def chegar(self, cliente: Cliente)%0A        self.espera.append(Cliente)%0Ar%0A     def chamar(self, indice: int):%0A        if indice %3C 0 or indice %3E= len(self.caixas):%0A            print(%22fail: caixa inexistente%22)%0A            return%0A        if self.caixas%5Bindice%5D is not None:%0A            print(%22fail: caixa ocupado%22)%0A            return%0A        if len(self.espera) == 0:%0A            print(%22fail: sem clientes%22)%0A            return%0A            %0A%0A # type: ignore\n+ \n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-11-09_15-14-58",
+            "content": "@@ -680,16 +680,17 @@\n liente)%0A\n+r\n %0A     de\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-09_15-15-15",
+            "content": "class Cliente:\n    def __init__(self, nome: str):\n        self.__nome = nome\n\n    def get_nome(self) -> str:\n        return self.__nome\n\n    def __str__(self) -> str:\n        return self.__nome\n    \nclass mercantil:\n    \n    def __init__(self, qtd_caixas: int):\n    \n    self.caixas: list[pessoa [none for _ in range (qtd_caixas)]\n    self.espera : list [Cliente] = []\n\n    def __str__(self) -> str:\n        caixas_str = \", \".join(str(c) if c is not None else \"-----\" for c in self.caixas)\n        fila_str = \", \".join(str(p) for p in self.espera)\n        return f\"Caixas: [{caixas_str}]\\nEspera: [{fila_str}]\"\n\n    def chegar(self, cliente: Cliente)\n        self.espera.append(Cliente)\n\n     def chamar(self, indice: int):\n        if indice < 0 or indice >= len(self.caixas):\n            print(\"fail: caixa inexistente\")\n            return\n        if self.caixas[indice] is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        if len(self.espera) == 0:\n            print(\"fail: sem clientes\")\n            return\n            \n\n # type: ignore",
+            "lines": "38"
         }
     ]
 }

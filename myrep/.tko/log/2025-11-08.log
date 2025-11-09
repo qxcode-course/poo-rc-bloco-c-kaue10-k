@@ -1,0 +1,5 @@
+2025-11-08 13:38:26, MOVE, v:1, k:poo@array, mode:PICK
+2025-11-08 13:38:27, EXEC, v:1, k:poo@array, mode:LOCK, rate:0
+2025-11-08 13:38:29, EXEC, v:1, k:poo@array, mode:FREE
+2025-11-08 13:39:03, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-08 13:39:04, EXEC, v:1, k:poo@budega, mode:FULL, rate:0, size:17
