@@ -36,7 +36,6 @@ Todos os comandos seguem o modelo `$comando arg1 arg2 ...`. Em caso de erro, uma
 ## Guide
 
 ![diagrama](../../.tko/cache/poo/base/budega/diagrama.png)
-
 [![youtube icon](https://raw.githubusercontent.com/qxcodepoo/arcade/master/base/animal/../youguide.png)](https://youtu.be/5-GqCN0VPpQ?si=SkROsibr5OC4tdnZ)
 
 ### Parte 1: Classe Cliente
@@ -201,3 +200,4 @@ $end
 - ts
   - [shell.ts](../../.tko/cache/poo/base/budega/.cache/draft/ts/shell.ts)
 <!-- links -->
+

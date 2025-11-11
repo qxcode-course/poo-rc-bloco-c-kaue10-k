@@ -1,0 +1,6 @@
+2025-11-10 12:03:21, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-10 12:03:22, EXEC, v:1, k:poo@budega, mode:FULL, rate:0, size:48
+2025-11-10 12:03:24, EXEC, v:1, k:poo@budega, mode:FREE
+2025-11-10 12:03:40, MOVE, v:1, k:poo@budega, mode:PICK
+2025-11-10 12:03:42, EXEC, v:1, k:poo@budega, mode:FULL, rate:0
+2025-11-10 12:12:17, MOVE, v:1, k:poo@lapiseira, mode:PICK

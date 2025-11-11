@@ -1,3 +1,5 @@
+import sys
+
 class Cliente:
     def __init__(self, nome: str):
         self.__nome = nome
@@ -11,9 +13,7 @@ class Cliente:
 
 class Mercantil:
     def __init__(self, qtd_caixas: int):
-    
         self.caixas: list[Cliente | None] = [None for _ in range(qtd_caixas)]
-        
         self.espera: list[Cliente] = []
 
     def __str__(self) -> str:
@@ -38,14 +38,26 @@ class Mercantil:
         cliente = self.espera.pop(0)
         self.caixas[indice] = cliente
 
-        def finalizar(self, indice: int):
-            if indice < 0 or indice >= len(self.caixas):
-                print("fail: caixa inexistente")
+    def finalizar(self, indice: int):
+        if indice < 0 or indice >= len(self.caixas):
+            print("fail: caixa inexistente")
             return
-            if self.caixas[indice] is None:
-                print("fail: caixa vazio")
+        if self.caixas[indice] is None:
+            print("fail: caixa vazio")
             return
 
-        cliente = self.caixas[indice]
+        print(f"{self.caixas[indice]} finalizou o atendimento no caixa {indice}")
         self.caixas[indice] = None
-        return cliente
+
+
+def main():
+    for line in sys.stdin:
+        line = line.strip()
+        if not line:
+             continue
+
+        print(f"${line}")
+
+        ui = line.split()
+        cmd = ui[0]
+        
