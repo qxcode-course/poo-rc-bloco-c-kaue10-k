@@ -1,15 +1,14 @@
 import sys
 
 class Cliente:
-    def __init__(self, nome: str):
-        self.__nome = nome
+    def __init__(self,nome:str):
+        self._nome = nome
 
     def get_nome(self) -> str:
-        return self.__nome
-
+        return self._nome
+    
     def __str__(self) -> str:
-        return self.__nome
-
+        return self._nome
 
 class Mercantil:
     def __init__(self, qtd_caixas: int):
