@@ -40,52 +40,7 @@ Todos os comandos seguem o modelo `$comando arg1 arg2 ...`. Em caso de erro, uma
 
 ### Parte 1: Classe Cliente
 
-- Crie a classe `Cliente` com os atributos `nome`.
-- Defina os atributos como privados.
-- Crie o construtor da classe que recebe o `nome` como uma string.
-- Crie o método `getNome()` para retornar o nome do cliente.
-- Crie o método `toString()` para retornar uma string no formato "nome".
-
-### Parte 2: Classe Mercantil
-
-#### Construtor
-
-- Implemente o construtor da classe `Market`, que recebe a quantidade de caixas como parâmetro.
-- Inicialize os atributos da classe, incluindo o vetor de caixas e a fila de espera.
-- Preencha o vetor de caixas com `null` para indicar que todos os caixas estão vazios.
-
-#### Método `toString()`
-
-- Implemente o método `toString()` para retornar uma representação em string do estado atual do mercantil. Exemplo
-
-```txt
-Caixas: [-----, -----]
-Espera: [carla, maria, rubia]
-```
-
-- Pesquise na sua linguagem e aprenda a utilizar os métodos map, join se existirem.
-- Use a função `map()` para percorrer o vetor de caixas e a fila de espera e criar uma string que represente cada caixa e cada cliente na fila.
-- Utilize if e else ou operador ternário para verificar se cada caixa está vazio ou ocupado e ajustar a representação de acordo.
-- Junte as strings individuais de cada caixa e da fila de espera usando o método `join()` para criar uma representação coerente do estado do mercantil.
-- Retorne a string resultante.
-
-### Parte 3: Chegar
-
-- Na classe `Market`, crie o método `arrive(person: Person): void` que permite que uma pessoa chegue na fila de espera.
-- Adicione a pessoa ao final da fila de espera.
-
-### Parte 4: Chamar Cliente
-
-- Na classe `Market`, crie o método `call(index: number): void` que permite chamar o primeiro cliente da lista de espera para ser atendido em um caixa específico.
-- Se não houver ninguém na fila de espera, emita a mensagem de erro "fail: sem clientes".
-- Se o caixa estiver ocupado, imprima a mensagem de erro "fail: caixa ocupado".
-
-### Parte 5: Finalizar Atendimento
-
-- Na classe `Market`, crie o método `finish(index: number): Pessoa | null` que permite finalizar o atendimento de um cliente em um caixa específico.
-- Verifique se o índice do caixa é válido e, se não for, emita a mensagem de erro `fail: caixa inexistente`.
-- Verifique se há alguém sendo atendido no caixa. Se não houver, emita a mensagem de erro `fail: caixa vazio`.
-- Retorne o cliente que foi atendido e libere o caixa, definindo-o como null.
+- 
 
 ## Answers
 

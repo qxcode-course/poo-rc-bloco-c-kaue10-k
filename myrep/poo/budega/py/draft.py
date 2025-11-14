@@ -10,18 +10,6 @@ class Cliente:
     def __str__(self) -> str:
         return self.__nome
 
-import sys
-
-class Cliente:
-    def __init__(self, nome: str):
-        self.__nome = nome
-
-    def get_nome(self) -> str:
-        return self.__nome
-
-    def __str__(self) -> str:
-        return self.__nome
-
 
 class Mercantil:
     def __init__(self, qtd_caixas: int):
@@ -116,3 +104,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -16,15 +16,15 @@ class Onibus:
         return f"Cadeiras: [{cadeiras_str}]\nEspera: [{espera_str}]"
 
 
-david = Pessoa("david")
-print(david)
+kaue = Pessoa("kaue")
+print(kaue)
 onibus = Onibus(5)
 
-onibus.espera.append(david)
-onibus.espera.append(david)
-onibus.espera.append(david)
-onibus.espera.append(david)
-onibus.espera.append(david)
+onibus.espera.append(kaue)
+onibus.espera.append(kaue)
+onibus.espera.append(kaue)
+onibus.espera.append(kaue)
+onibus.espera.append(kaue)
 
 print(onibus)
 

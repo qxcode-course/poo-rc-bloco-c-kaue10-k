@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2025-11-11_13-21-00",
-            "content": "class grafite:\n    def __init__(self, calibre: float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n",
+            "content": "@@ -3,9 +3,9 @@\n ass \n-G\n+g\n rafi\n@@ -171,238 +171,4 @@\n ho%0A%0A\n-    def __str__(self):%0A        return f%22%7Bself.calibre%7Dmm,%7Bself.dureza%7Dm%7Bself.tamanho%7Dmm%22 %0A%0Aclass lapiseira:%0A    def __init__(self, calibre: float):%0A        self.calibre = calibre%0A        self.bico = None%0A        self.tambor = %5B%5D%0Ar%0A   \n",
             "lines": "6"
+        },
+        {
+            "label": "2025-11-14_12-18-59",
+            "content": "@@ -171,186 +171,8 @@\n ho%0A%0A\n-    def gasto(self):%0A        tabela = %7B%0A            %22HB%22:1,%0A            %222B%22:2,%0A            %224B%22:4,%0A            %226B%22:6,%0A        %7D%0A%0A        return tabela.get(self.dureza, 0)%0A    %0A\n     \n@@ -221,17 +221,19 @@\n calibre%7D\n-:\n+mm,\n %7Bself.du\n@@ -237,17 +237,17 @@\n .dureza%7D\n-:\n+m\n %7Bself.ta\n@@ -256,17 +256,20 @@\n nho%7D\n-%22\n+mm%22 \n %0A%0Aclass \n Lapi\n@@ -268,9 +268,9 @@\n ass \n-L\n+l\n apis\n@@ -400,23 +400,9 @@\n  %5B%5D%0A\n-%0A%0A%0A%0A        %0A%0A%0A\n+r\n %0A   \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-14_12-52-09",
+            "content": "class Grafite:\n    def __init__(self, calibre: float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n    def gasto(self):\n        tabela = {\n            \"HB\":1,\n            \"2B\":2,\n            \"4B\":4,\n            \"6B\":6,\n        }\n\n        return tabela.get(self.dureza, 0)\n    \n    def __str__(self):\n        return f\"{self.calibre}:{self.dureza}:{self.tamanho}\"\n\nclass Lapiseira:\n    def __init__(self, calibre: float):\n        self.calibre = calibre\n        self.bico = None\n        self.tambor = []\n\n\n\n\n        \n\n\n\n   ",
+            "lines": "33"
         }
     ]
 }
