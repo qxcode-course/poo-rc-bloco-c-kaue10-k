@@ -16,4 +16,3 @@ class Pulapula:
 
     def enter(self):
         if not self.waiting:
-            

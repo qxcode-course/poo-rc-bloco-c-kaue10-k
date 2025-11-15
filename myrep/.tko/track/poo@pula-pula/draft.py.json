@@ -7,8 +7,23 @@
         },
         {
             "label": "2025-11-14_21-43-07",
-            "content": "class Crianca:\n    def __init__(self, nome: str, idade: int):\n        self.nome = nome\n        self.idade = idade \n\n    def __str__ (self):\n        return f\"{self.nome},{self.idade}\"\n    \nclass Pulapula:\n    def __int__(self):\n        self.waiting = []\n        self.playing = []\n\n    def arrive(self, nome: str, idade: int):\n        self.waiting.append(crianca(nome, idade))\n\n    def enter(self):\n        if not self.waiting:\n            ",
+            "content": "@@ -435,196 +435,4 @@\n     \n-gmmn%C3%A7nfdfdfbsfsfffsfgbbhjbhbkbjbjbjbkjbjkbjb  j j  bbnbnbbhbjhhjbjhbjkbbbhbkbljkbhbblbhjbkjbkbjbkjbbbbbkbbkjbihbhbkbkbbbkbkjbjbbkbnkbbkbkbkjbjbjklkjbblkblkljbljbkbbjkblkjjbljbbklkkbbkbkbkbkbbb\n",
             "lines": "19"
+        },
+        {
+            "label": "2025-11-15_02-18-46",
+            "content": "@@ -435,44 +435,196 @@\n     \n-  jbkbkbbkbl\n+gmmn%C3%A7nfdfdfbsfsfffsfgbbhjbhbkbjbjbjbkjbjkbjb  j j  bbnbnbbhbjhhjbjhbjkbbbhbkbljkbhbblbhjbkj\n bkbjbk\n-gffg\n+jbbb\n bb\n+k\n bb\n-lkjvjvjvvhvhvv\n+kjbihbhbkbkbbbkbkjbjbbkbnkbbkbkbkjbjbjklkjbblkblkljbljbkbbjkblkjjbljbbklkkbbkbkbkbkbbb\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-15_02-23-36",
+            "content": "@@ -419,8 +419,60 @@\n aiting:%0A\n+              jbkbkbbkblbkbjbkgffgbbbblkjvjvjvvhvhvv\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-15_02-35-48",
+            "content": "class Crianca:\n    def __init__(self, nome: str, idade: int):\n        self.nome = nome\n        self.idade = idade \n\n    def __str__ (self):\n        return f\"{self.nome},{self.idade}\"\n    \nclass Pulapula:\n    def __int__(self):\n        self.waiting = []\n        self.playing = []\n\n    def arrive(self, nome: str, idade: int):\n        self.waiting.append(crianca(nome, idade))\n\n    def enter(self):\n        if not self.waiting:\n",
+            "lines": "18"
         }
     ]
 }
