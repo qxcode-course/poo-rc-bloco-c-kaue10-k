@@ -1,3 +1,5 @@
+import sys
+
 class Grafite:
     def __init__(self, calibre: float, dureza: str, tamanho: int):
         self.calibre = calibre
@@ -21,7 +23,7 @@ class Lapiseira:
     def __init__(self, calibre: float):
         self.calibre = calibre
         self.bico = None
-        self.tambor = []
+        self.tambor:list[Grafite] = []
 
     def insert(self, grafite: Grafite):
         if grafite.calibre != self.calibre:
@@ -61,10 +63,45 @@ class Lapiseira:
     def __str__(self):
         bico_str = str(self.bico) if self.bico is not None else "[]"
         tambor_str = "".join(str(g) for g in self.tambor)
-        return f"calibre: {self.calibre}, bico: {bico_str}, tambor: <{tambor_str}>"
+        return f"calibre: {self.calibre}, bico: {bico_str}, tambor: <{tambor_str}>" 
     
+def main ():
+    import sys
+
+    Lapiseira = None
+
+
+    for linha in sys.stdin:
+        linha = linha.strip()
+        if not linha:
+            continue
+
+
+        partes = linha.strip()
+        comando = partes[0]
+        
+        if comando == "end":
+            print("end")
+            break
+
+        print("f{linha}")
+
+
+        if comando == "init":
+            lapiseira = Lapiseira(float(partes[1])))
+
+
+        elif comando == "insert":
+            calibre = float(partes[1])
+            dureza = partes[2]
+            tamanho = int(partes[3])
+            lapiseira.inserir(Grafite(calibre, dureza, tamanho))
+
+
 
         
+
+    
 
 
 

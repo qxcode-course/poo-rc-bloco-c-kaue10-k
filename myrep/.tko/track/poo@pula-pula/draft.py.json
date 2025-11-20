@@ -22,8 +22,43 @@
         },
         {
             "label": "2025-11-15_02-35-48",
-            "content": "class Crianca:\n    def __init__(self, nome: str, idade: int):\n        self.nome = nome\n        self.idade = idade \n\n    def __str__ (self):\n        return f\"{self.nome},{self.idade}\"\n    \nclass Pulapula:\n    def __int__(self):\n        self.waiting = []\n        self.playing = []\n\n    def arrive(self, nome: str, idade: int):\n        self.waiting.append(crianca(nome, idade))\n\n    def enter(self):\n        if not self.waiting:\n",
+            "content": "@@ -233,22 +233,23 @@\n    self.\n-espera\n+waiting\n  = %5B%5D%0A  \n@@ -263,17 +263,15 @@\n elf.\n-brincandp\n+playing\n  = %5B\n@@ -285,14 +285,14 @@\n def \n-chegar\n+arrive\n (sel\n@@ -298,23 +298,33 @@\n lf, nome\n+: str\n , idade\n+: int\n ):%0A     \n@@ -335,25 +335,23 @@\n elf.\n-espera.insert(0, \n+waiting.append(\n cria\n@@ -369,21 +369,16 @@\n dade))%0A%0A\n-    %0A\n     def \n@@ -380,18 +380,17 @@\n  def ent\n-ra\n+e\n r(self):\n@@ -405,29 +405,22 @@\n  if \n-len(\n+not \n self.\n-espera)%0A%0A    %0Af\n+waiting:\n %0A\n",
             "lines": "18"
+        },
+        {
+            "label": "2025-11-16_21-43-38",
+            "content": "@@ -1,434 +1,160 @@\n-class Crianca:%0A    def __init__(self, nome: str, idade: int):%0A        self.nome = nome%0A        self.idade = idade %0A%0A    def __str__ (self):%0A        return f%22%7Bself.nome%7D,%7Bself.idade%7D%22%0A    %0Aclass Pulapula:%0A    def __int__(self):%0A        self.espera = %5B%5D%0A        self.brincando = %5B%5D%0A%0A    def chegar(self, nome, idade):%0A        self.espera.insert(0, crianca(nome, idade))%0A%0A    %0A    def entrar(self):%0A        if len(self.espera)\n+@@ -266,17 +266,17 @@%0A brincand%0A-o%0A+p%0A  = %255B%255D%250A%250A %0A@@ -381,32 +381,32 @@%0A f entrar(self):%250A%0A+%0A         if len(s%0A@@ -420,258 +420,8 @@%0A era)%0A-\n  == 0:\n-%0A\n+%250A\n     \n@@ -167,22 +167,26 @@\n   return\n-%0A\n+%250A\n     \n-%0A\n+%250A\n         \n@@ -212,18 +212,22 @@\n ra.pop()\n-%0A%0A\n+%250A%250A\n         \n@@ -259,18 +259,22 @@\n crianca)\n-%0A%0A\n+%250A%250A\n     def \n@@ -284,17 +284,19 @@\n r(self):\n-%0A\n+%250A\n         \n@@ -323,17 +323,19 @@\n o) == 0:\n-%0A\n+%250A\n         \n@@ -344,17 +344,19 @@\n   return\n-%0A\n+%250A\n         \n@@ -362,60 +362,71 @@\n   gh\n-d\n fg\n-tvtvtgtgtgftctctcttttctcttcctctcrcrceg%0A    %0A%0A%0A  \n+gsfgfgnfgnnfgnfnsgfngffsfgfgsfgfggsfgfgnsfgg%250A    %250A%0A %250A%250A\n   %0A\n-f%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-11-16_22-03-56",
+            "content": "@@ -56,21 +56,8 @@\n  int\n-, espera: str\n ):%0A \n@@ -111,37 +111,8 @@\n ade \n-%0A        self.espera = espera\n %0A%0A  \n@@ -124,16 +124,17 @@\n  __str__\n+ \n (self):%0A\n@@ -161,17 +161,17 @@\n lf.nome%7D\n-:\n+,\n %7Bself.id\n@@ -176,17 +176,20 @@\n idade%7D%22%0A\n-%0A\n+    \n %0Aclass P\n@@ -201,33 +201,32 @@\n la:%0A    def __in\n-i\n t__(self):%0A     \n@@ -239,30 +239,16 @@\n f.espera\n-:list%5BCrianca%5D\n  = %5B%5D%0A  \n@@ -271,22 +271,8 @@\n ando\n-:list%5BCrianca%5D\n  = %5B\n@@ -299,24 +299,19 @@\n lf, \n-Crianca: Crianca\n+nome, idade\n ):%0A \n@@ -333,99 +333,40 @@\n era.\n-append(Crianca)%0A%0A    def entrar(self):%0A        if len(self.espera) == 0:%0A            return\n+insert(0, crianca(nome, idade))%0A\n %0A   \n@@ -379,11 +379,13 @@\n def \n-sai\n+entra\n r(se\n@@ -409,25 +409,22 @@\n en(self.\n-brincando\n+espera\n ) == 0:%0A\n@@ -442,28 +442,24 @@\n  return%0A    \n-    \n %0A        Cri\n@@ -455,17 +455,17 @@\n         \n-C\n+c\n rianca =\n@@ -474,24 +474,22 @@\n elf.\n-brincando\n+espera\n .pop()%0A\n+%0A\n     \n@@ -489,38 +489,41 @@\n )%0A%0A        self.\n-espera\n+brincando\n .insert(0, Crian\n@@ -517,17 +517,17 @@\n sert(0, \n-C\n+c\n rianca)%0A\n@@ -539,42 +539,69 @@\n def \n-remover \n+sair(self):\n %0A    \n-%0A%0A%0A\n     \n+if len(self.brincando) == 0:\n %0A    \n-%0A\n         \n %0A   \n@@ -600,35 +600,75 @@\n     \n-%0A    %0A%0A%0Adef main():\n+return%0A         ghdfgtvtvtgtgtgftctctcttttctcttcctctcrcrceg\n %0A    %0A%0A%0A\n %0A   \n@@ -663,16 +663,15 @@\n %0A    %0A%0A%0A\n-%0A\n     %0A\n-%0A\n+f\n %0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-11-19_12-04-59",
+            "content": "@@ -1,14 +1,12 @@\n-%0A%0A\n class Crianc\n@@ -682,516 +682,8 @@\n ver \n-(self, nome: str):%0A        for i, Crianca in enumerate(self.brincando):%0A            if Crianca.nome == nome:%0A                self.brincando.pop(i)%0A                return%0A        %0A        print(f%22fail: %7Bnome%7D nao esta no pula-pula%22)%0A%0A        def mostrar(self):%0A%0A            espera_exibida = list(reversed(self.espera))%0A%0A            bricando_exibido = list(reserved(self.brincando))%0A%0A            print(f%22%5B%7B','.join(map(str, espera_exibida))%7D%5D =%3E %5B%7B','.join(map(str, brincando_exibido))%7D%5D %22)%0A%0A    %0A%0A%0A        %0A%0A%0A\n %0A   \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-19_12-16-38",
+            "content": "@@ -1168,29 +1168,16 @@\n o))%7D%5D %22)\n-%0A            \n %0A%0A    %0A%0A\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-20_02-45-11",
+            "content": "@@ -1165,16 +1165,19 @@\n bido))%7D%5D\n+ %22)\n %0A       \n@@ -1181,92 +1181,49 @@\n     \n-%0A%0A%0A%0A%0A    def main():%0A        pula = Pulapula()%0A%0A        while true:\n+    %0A%0A    %0A%0A%0A        %0A%0A%0A\n %0A    \n+%0A%0A%0A\n     \n+%0A\n     \n-try:\n %0A   \n@@ -1231,56 +1231,33 @@\n     \n+%0A\n     \n-    cmd = input(.strip().split)%0A            \n+%0A%0A%0Adef main():%0A    %0A\n %0A%0A%0A \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-20_02-50-03",
+            "content": "@@ -1319,644 +1319,8 @@\n     \n-    break%0A                %0A%0A            if not cmd:%0A                continue %0A                %0A%0A            if cmd%5B0%5D == %22fim%22:%0A                break%0A                %0A            if cmd%5B0%5D == %22mostrar%22:%0A                pula.show()%0A%0A%0A            elif cmd%5B0%5D == %22chegar%22:%0A                nome = cmd%5B1%5D%0A                idade = int(cmd%5B2%5D)%0A                pula.chegar(nome, idade)%0A%0A            elif cmd%5B0%5D == %22entrar%22:%0A                pula.entrar()%0A%0A%0A            elif cmd %5B0%5D == %22sair%22:%0A                pula.sair()%0A            %0A            elif cmd%5B0%5D == %22remover%22:%0A                nome = cmd %5B1%5D%0A                pula.remover(nome)%0A%0A    %0A%0A%0A\n %0A%0A%0A \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-11-20_02-57-36",
+            "content": "\n\nclass Crianca:\n    def __init__(self, nome: str, idade: int, espera: str):\n        self.nome = nome\n        self.idade = idade \n        self.espera = espera\n\n    def __str__(self):\n        return f\"{self.nome}:{self.idade}\"\n\n\nclass Pulapula:\n    def __init__(self):\n        self.espera:list[Crianca] = []\n        self.brincando:list[Crianca] = []\n\n    def chegar(self, Crianca: Crianca):\n        self.espera.append(Crianca)\n\n    def entrar(self):\n        if len(self.espera) == 0:\n            return\n    \n    def sair(self):\n        if len(self.brincando) == 0:\n            return\n        \n        Crianca = self.brincando.pop()\n        self.espera.insert(0, Crianca)\n\n    def remover (self, nome: str):\n        for i, Crianca in enumerate(self.brincando):\n            if Crianca.nome == nome:\n                self.brincando.pop(i)\n                return\n        \n        print(f\"fail: {nome} nao esta no pula-pula\")\n\n        def mostrar(self):\n\n            espera_exibida = list(reversed(self.espera))\n\n            bricando_exibido = list(reserved(self.brincando))\n\n            print(f\"[{','.join(map(str, espera_exibida))}] => [{','.join(map(str, brincando_exibido))}]\n        \n\n\n\n\n    def main():\n        pula = Pulapula()\n\n        while true:\n            try:\n                cmd = input(.strip().split)\n                break\n                \n\n            if not cmd:\n                continue \n                \n\n            if cmd[0] == \"fim\":\n                break\n                \n            if cmd[0] == \"mostrar\":\n                pula.show()\n\n\n            elif cmd[0] == \"chegar\":\n                nome = cmd[1]\n                idade = int(cmd[2])\n                pula.chegar(nome, idade)\n\n            elif cmd[0] == \"entrar\":\n                pula.entrar()\n\n\n            elif cmd [0] == \"sair\":\n                pula.sair()\n            \n            elif cmd[0] == \"remover\":\n                nome = cmd [1]\n                pula.remover(nome)\n\n    \n\n\n\n\n\n    \n\n\n",
+            "lines": "96"
         }
     ]
 }

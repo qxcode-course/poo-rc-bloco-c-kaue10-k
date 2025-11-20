@@ -12,7 +12,7 @@ sources:
   type: clone
   branch: master
   cache_path: /workspaces/poo-rc-bloco-c-kaue10-k/myrep/.tko/cache/poo/Readme.md
-  cache_timestamp: '2025-11-15 02:18:33'
+  cache_timestamp: '2025-11-20 02:44:54'
   filters:
   - listas
 expanded:
@@ -27,4 +27,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@pula-pula
+selected: poo@bloco_c-listas

@@ -27,8 +27,38 @@
         },
         {
             "label": "2025-11-14_20-31-25",
-            "content": "class Grafite:\n    def __init__(self, calibre: float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n    def gasto_por_folha(self):\n        tabela = {\n            \"HB\": 1,\n            \"2B\": 2,\n            \"4B\": 4,\n            \"6B\": 6\n        }\n        return tabela[self.dureza]\n\n    def __str__(self):\n        return f\"[{self.calibre}:{self.dureza}:{self.tamanho}]\"\n\n\nclass Lapiseira:\n    def __init__(self, calibre: float):\n        self.calibre = calibre\n        self.bico = None\n        self.tambor = []\n\n    def insert(self, grafite: Grafite):\n        if grafite.calibre != self.calibre:\n            print(\"fail: calibre incompat\u00edvel\")\n        return\n        self.tambor.append(grafite)\n\n    def pull(self):\n        if self.bico is not None:\n            print(\"fail: ja existe grafite no bico\")\n        return \n        if len(self.tambor) == 0:\n            return  \n        self.bico = self.tambor.pop(0)\n\n    def remove(self):\n        self.bico = None \n\n    def write(self):\n        if self.bico is None:\n            print(\"fail: nao existe grafite no bico\")\n            return\n        \n        gasto = self.bico.gasto_por_folha()\n\n        if self.bico.tamanho == 10:\n            print(\"fail: tamanho insuficiente\")\n            return\n        \n        if self.bico.tamanho - gasto < 10:\n            self.bico.tamanho = 10\n            print(\"fail: folha incompleta\")\n            return\n\n        self.bico.tamanho -= gasto\n\n    def __str__(self):\n        bico_str = str(self.bico) if self.bico is not None else \"[]\"\n        tambor_str = \"\".join(str(g) for g in self.tambor)\n        return f\"calibre: {self.calibre}, bico: {bico_str}, tambor: <{tambor_str}>\"\n    \n\n        \n\n\n\n   ",
+            "content": "@@ -1646,51 +1646,8 @@\n bor)\n- # pyright: ignore%5BreportUnknownMemberType%5D\n %0A   \n",
             "lines": "71"
+        },
+        {
+            "label": "2025-11-15_14-15-16",
+            "content": "@@ -1645,15 +1645,52 @@\n mbor\n-: str))\n+) # pyright: ignore%5BreportUnknownMemberType%5D\n %0A   \n@@ -1769,17 +1769,16 @@\n r_str%7D%3E%22\n- \n %0A    %0A%0A \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-18_13-02-41",
+            "content": "@@ -571,22 +571,8 @@\n mbor\n-:list%5BGrafite%5D\n  = %5B\n@@ -1641,16 +1641,22 @@\n f.tambor\n+: str)\n )%0A      \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-18_13-14-27",
+            "content": "@@ -1752,20 +1752,12 @@\n   %0A%0A\n-def main():%0A\n+    \n     \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-18_13-35-03",
+            "content": "@@ -1,20 +1,8 @@\n-import sys%0A%0A\n class Gr\n@@ -1764,102 +1764,8 @@\n ():%0A\n-    import sys%0A%0A    Lapiseira = None%0A%0A    for linha in sys.stdin()%0A    if not linha:%0A        %0A\n     \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-11-18_22-46-45",
+            "content": "@@ -1763,16 +1763,17 @@\n    %0A\n+%0A\n def main\n  ():\n@@ -1768,17 +1768,16 @@\n def main\n- \n ():%0A    \n@@ -1810,17 +1810,16 @@\n = None%0A%0A\n-%0A\n     for \n@@ -1840,48 +1840,15 @@\n tdin\n-:%0A        linha = linha.strip()%0A   \n+()%0A\n     \n- \n if n\n@@ -1869,495 +1869,8 @@\n     \n-    continue%0A%0A%0A        partes = linha.strip()%0A        comando = partes%5B0%5D%0A        %0A        if comando == %22end%22:%0A            print(%22end%22)%0A            break%0A%0A        print(%22f%7Blinha%7D%22)%0A%0A%0A        if comando == %22init%22:%0A            lapiseira = Lapiseira(float(partes%5B1%5D)))%0A%0A%0A        elif comando == %22insert%22:%0A            calibre = float(partes%5B1%5D)%0A            dureza = partes%5B2%5D%0A            tamanho = int(partes%5B3%5D)%0A            lapiseira.inserir(Grafite(calibre, dureza, tamanho))%0A%0A%0A%0A        %0A\n %0A   \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-11-19_11-58-41",
+            "content": "import sys\n\nclass Grafite:\n    def __init__(self, calibre: float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza\n        self.tamanho = tamanho\n\n    def gasto_por_folha(self):\n        tabela = {\n            \"HB\": 1,\n            \"2B\": 2,\n            \"4B\": 4,\n            \"6B\": 6\n        }\n        return tabela[self.dureza]\n\n    def __str__(self):\n        return f\"[{self.calibre}:{self.dureza}:{self.tamanho}]\"\n\n\nclass Lapiseira:\n    def __init__(self, calibre: float):\n        self.calibre = calibre\n        self.bico = None\n        self.tambor:list[Grafite] = []\n\n    def insert(self, grafite: Grafite):\n        if grafite.calibre != self.calibre:\n            print(\"fail: calibre incompat\u00edvel\")\n        return\n        self.tambor.append(grafite)\n\n    def pull(self):\n        if self.bico is not None:\n            print(\"fail: ja existe grafite no bico\")\n        return \n        if len(self.tambor) == 0:\n            return  \n        self.bico = self.tambor.pop(0)\n\n    def remove(self):\n        self.bico = None \n\n    def write(self):\n        if self.bico is None:\n            print(\"fail: nao existe grafite no bico\")\n            return\n        \n        gasto = self.bico.gasto_por_folha()\n\n        if self.bico.tamanho == 10:\n            print(\"fail: tamanho insuficiente\")\n            return\n        \n        if self.bico.tamanho - gasto < 10:\n            self.bico.tamanho = 10\n            print(\"fail: folha incompleta\")\n            return\n\n        self.bico.tamanho -= gasto\n\n    def __str__(self):\n        bico_str = str(self.bico) if self.bico is not None else \"[]\"\n        tambor_str = \"\".join(str(g) for g in self.tambor)\n        return f\"calibre: {self.calibre}, bico: {bico_str}, tambor: <{tambor_str}>\" \n    \ndef main ():\n    import sys\n\n    Lapiseira = None\n\n\n    for linha in sys.stdin:\n        linha = linha.strip()\n        if not linha:\n            continue\n\n\n        partes = linha.strip()\n        comando = partes[0]\n        \n        if comando == \"end\":\n            print(\"end\")\n            break\n\n        print(\"f{linha}\")\n\n\n        if comando == \"init\":\n            lapiseira = Lapiseira(float(partes[1])))\n\n\n        elif comando == \"insert\":\n            calibre = float(partes[1])\n            dureza = partes[2]\n            tamanho = int(partes[3])\n            lapiseira.inserir(Grafite(calibre, dureza, tamanho))\n\n\n\n        \n\n    \n\n\n\n   ",
+            "lines": "108"
         }
     ]
 }
